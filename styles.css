@@ -1,0 +1,129 @@
+* {
+    padding:0;
+    margin : 0;
+}
+html,body{
+    height:100%;
+    margin:0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background: url(https://cdn.pixabay.com/photo/2020/07/09/05/41/quran-5385906_960_720.jpg)
+    center center/cover fixed;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin-bottom:0;
+}
+
+#urdu-word {
+    font-size: 1.3em;
+    color: #f0f0f0;
+    font-weight: bold;}
+
+#main-heading {
+    font-size: 2.5em;
+    color: #f0f0f0;
+    font-weight: bold;
+    text-align: center;
+    text-decoration:double underline;
+    text-shadow: 0 0 5px;
+}
+
+#first-pera {
+    font-size: 1.2em;
+    color: #fff;
+    margin: 10px 0;
+}
+
+.container {
+    margin-top:2rem;
+    background: rgba(90, 60, 60, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0 0 10px rgba(10, 10, 10, 0.5);
+}
+ #arabic{
+    font-size: 1.8em;
+    color: #f0f0f0;
+ }
+
+#urdu,#english{
+    font-size: 1.2em;
+    color: #fab2b2;
+}
+#source {
+    font-size: 1.2em;
+    color: #050505;
+}
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #252729;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3a3d40;
+    box-shadow: #f7f3f3 0px 0px 10px;
+}
+button:active {
+    background-color: #1f2022;
+    box-shadow: #f7f3f3 0px 0px 5px;
+}
+button:focus {
+    outline:none;
+    box-shadow: #f7f3f3 0px 0px 5px;
+}
+#surah-name, #ayah-number {
+    font-size: 1.2em;
+    color: #f0f0f0;
+    font-weight: bold;
+    text-align: center;
+    margin: 5px 0;
+}
+#surah-name {
+    text-decoration: underline;
+}
+#ayah-number {
+    font-style: italic;
+}
+
+#source {
+    font-size: 1.2em;
+    color: #bb9a9a;
+    text-align: center;
+    margin-top: 10px;
+    font-style: italic;
+}
+main {
+    flex:1;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+}
+footer {
+    text-align: center;
+    width: 100%;
+    color: #f0f0f0;
+    padding: 10px;
+    border-top:1px solid  rgba(0, 0, 0, 0.5)f0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
