@@ -2,7 +2,7 @@ const getButton = document.querySelector("#btn")
 const matan = document.querySelector("#arabic")
 const englishTran = document.querySelector("#english")
 const urduTran = document.querySelector("#urdu")
-const sources = document.querySelector("#source")
+const sources = document.querySelector(".source")
 const surahName = document.querySelector("#surah-name")
 const ayahNumber = document.querySelector("#ayah-number")
 
@@ -43,3 +43,41 @@ btnSource.addEventListener("click", () => {
     sources.style.display = "block"; // Ensure the source is visible
     btnSource.innerHTML = "Hide Source"; // Change button text
 })
+
+
+const hadeethPeragraph = document.querySelector("#hadeeth")
+const narrator = document.querySelector(".narrator")
+const source = document.querySelector("#source-peragraph")
+const hadeethContent = document.querySelector(".content")
+// const hadeethContainer = document.querySelector("#hadeeth-container")
+let i = 0;
+// document.addEventListener("DOMContentLoaded", () => {  
+//     const getHadeethByTime =setInterval(() =>{
+//     hadeethPeragraph.innerHTML = hadeeths[i].english
+//     narrator.innerHTML = `Narrator: ${hadeeths[i].narrator}`
+//     source.innerHTML = `Source: ${hadeeths[i].source}`
+
+//     i++;
+//     if (i >= hadeeths.length){
+//         i = 0;
+//     }
+//     },6000)
+// });
+document.addEventListener("DOMContentLoaded",() => {
+    function getHadeeth() {
+        hadeethContent.style.opacity = 0; // Start with opacity 0
+        setTimeout( () => {
+            hadeethPeragraph.innerHTML = `Hadeeth: ${hadeeths[i].english}`;
+            narrator.innerHTML = `Narrator: ${hadeeths[i].narrator}`;
+            source.innerHTML = `Source: ${hadeeths[i].source}`;
+            hadeethContent.style.opacity = 1; // Start with opacity 0
+            i++;
+            if (i >= hadeeths.length) {
+                i = 0;
+            }
+        },800);
+}
+getHadeeth();
+setInterval(getHadeeth, 6000);
+})
+

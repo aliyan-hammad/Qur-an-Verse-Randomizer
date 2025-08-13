@@ -18,6 +18,13 @@ body {
     min-height: 100vh;
     margin-bottom:0;
 }
+.box-info {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+}
 
 #urdu-word {
     font-size: 1.3em;
@@ -106,7 +113,14 @@ button:focus {
     font-style: italic;
 }
 
-#source {
+.source {
+    font-size: 1.2em;
+    color: #bb9a9a;
+    text-align: center;
+    margin-top: 10px;
+    font-style: italic;
+}
+#source-peragraph {
     font-size: 1.2em;
     color: #bb9a9a;
     text-align: center;
@@ -127,3 +141,14 @@ footer {
     border-top:1px solid  rgba(0, 0, 0, 0.5)f0;
     background-color: rgba(0, 0, 0, 0.5);
 }
+
+.content {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    opacity:0;
+    transition: opacity 0.8s ease-in-out;
+}
+

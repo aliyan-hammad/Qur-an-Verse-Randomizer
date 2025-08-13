@@ -10,20 +10,29 @@
     <main>
         <div class="box-info">
             <h1 id="main-heading">Qur'an Verse Randomizer <span id="urdu-word">(القرآن)</span></h1>
+            <p id="first-pera">The app randomly shows a verse in Arabic with English and Urdu translation with with surah name and ayah number.</p>
         </div>
-        <p id="first-pera">The app randomly shows a verse in Arabic with English and Urdu translation with with surah name and ayah number.</p>
+        <div class="container">
+            <div class="content">
+                <p class="narrator"></p>
+                <p id="hadeeth"></p>
+                <p id="source-peragraph"></p>
+            </div>
+        
+        </div>
         <div class="container">
             <p id="arabic"></p>
             <p id="urdu"></p>
             <p id="english"></p>
             <p id="surah-name"></p>
             <p id="ayah-number"></p>
-            <p id="source"></p>
+            <p class="source"></p>
             <div class="buttons">
                 <button id="btn">Get Ayah</button>
                 <button id="btn-source">Show Source</button>
             </div>
         </div>
+       
     </main>
     <footer>
     <p>Made with ❤️ by <a href="https://www.linkedin.com/in/aliyan-hamad-0572a4325/" target="_blank">Aliyan Hamad</a></p>
@@ -31,6 +40,7 @@
     </footer>
 
 </body>
-<script src="verses.js"></script>
+<script src="src/verses.js"></script>
+<script src="src/hadeeths.js"></script>
 <script src="script.js"></script>
 </html>
