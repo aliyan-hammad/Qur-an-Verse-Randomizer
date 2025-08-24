@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qur'an Verse Randomizer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <main>
+        <div class="box-info">
+            <header class="header">
+                <div class="navbar-div" id="left">
+                <!-- Dropdown Menu -->
+                    <div class="dropdown" id="dropdown">
+                        <div class="color-changer">
+                            <span class="mover">|</span>
+                            <a href="#" class="gradient-text" data-text="Al Qur'an">Al Qur'an</a>
+                        </div>
+                        <div class="color-changer">
+                            <span class="mover">|</span>
+                            <a href="#" class="gradient-text" data-text="Hadith">Hadith</a>
+                        </div>
+                       <div class="color-changer">
+                            <span class="mover">|</span>
+                            <a href="#" class="gradient-text" data-text="Tafseer">Tafseer</a>
+                       </div>
+                        <div class="color-changer">
+                            <span class="mover">|</span>
+                            <a href="#" class="gradient-text" data-text="Contact us">Contact us</a>
+                        </div>
+                        
+                    </div>
+                    <div class="homburgur-button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="logo">
+                        <h4>Kalaam</h4>
+                    </div>
+                </div>
+
+                <div class="navbar-div" id="right">
+                    <nav>
+                        <a href="/about" class="auth">Sign in</a>
+                        <a href="/" class="settings"></a>
+                        <i class="fas fa-search" id="search-btn"></i>
+                    </nav>
+                    <!-- Search Bar -->
+                     <div class="dropdown-container">
+                        <div class="search-bar">
+                            <input  type="text" placeholder="Search Qur'an or Hadith...">
+                            <span><button id="search-btn-go">Search</button></span>
+                        </div>
+                        <div class="recent-searches">
+                            <a href="">01 => Surat Al Fatiha</a>
+                        </div>
+                        <div class="recent-searches">
+                            <a href="">02 => Surat Al Baqara'h</a>
+                        </div>
+                     </div>
+
+                </div>
+            </header>
+        </div>
+
+        <div class="box-info1">
+            <h1 id="main-heading">Kalaam <span id="urdu-word">(القرآن)</span></h1>
+            <p class="first-pera">The Prophet Muhammad ﷺ said:</p>
+            <p class="first-pera">“The best among you are those who learn the Qur’an and teach it.”</p>
+            <p class="first-pera"> ~~ Sahih al-Bukhari ~~ </p>
+        </div>
+
+        <div class="container">
+            <div class="content">
+                <p class="narrator"></p>
+                <p id="hadeeth"></p>
+                <p id="source-peragraph"></p>
+            </div>
+        </div>
+
+        <div class="container">
+            <p id="arabic"></p>
+            <p id="urdu"></p>
+            <p id="english"></p>
+            <p id="surah-name"></p>
+            <p id="ayah-number"></p>
+            <p class="source"></p>
+            <div class="buttons">
+                <button id="btn">Get Ayah</button>
+                <button id="btn-source">Show Source</button>
+            </div>
+        </div>
+    </main>
+<footer>
+<p>Made with ❤️ by <a href="https://www.linkedin.com/in/aliyan-hamad-0572a4325/" target="_blank">Aliyan Hamad</a></p>
+<p>Source code available on <a href="https://github.com/aliyan-hammad/Qur-an-Verse-Randomizer" target="_blank">GitHub</a></p>
+</footer>
+
+</body>
+<script src="../src/verses.js"></script>
+<!-- <script src="src/hadeeths.js"></script> -->
+<script src="../src/xhr.js"></script>
+<script src="../src/api.js"></script>
+<script src="script.js"></script>
+</html>

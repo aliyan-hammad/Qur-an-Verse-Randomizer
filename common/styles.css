@@ -1,0 +1,472 @@
+* {
+    padding:0;
+    margin : 0;
+    box-sizing: border-box;
+
+}
+html,body{
+    height:100%;
+    margin:0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    /* background: url(https://cdn.pixabay.com/photo/2020/07/09/05/41/quran-5385906_960_720.jpg) */
+    /* center center/cover fixed; */
+    background-color: #242527;
+    display:block;
+    max-width:100%;
+    min-height: 100vh;
+    margin-bottom:0;
+}
+.box-info {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    z-index:998;
+    min-height: 3vw;
+    position:fixed;
+    top:0;
+    width:100%;
+    background-color: #312f2f;
+    /* padding-left: 1%; */
+    /* padding-right: 1%; */
+    border-bottom: 2px solid rgb(177, 169, 169);
+}
+
+.header {
+  display: flex;
+  width:100%;
+    max-width:100%;
+  justify-content: space-between; /* left side vs right side */
+  align-items: center;           /* ✅ vertical centering */
+  padding: 0.5rem 1rem;
+  background-color: #1e1e1e;     /* your dark theme */
+  position: relative;            /* so search bar can be absolutely positioned */
+}
+
+.logo {
+    font-size: 3vw;
+    color: #f0e3e3; /* default text color */
+    padding-bottom: 0.5vw;
+
+}
+
+.navbar-div {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a {
+    position: relative;
+    text-decoration: none;
+    color: #f0e3e3;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden; /*hides the line outside text area */
+    transition: color 0.3s ease;
+}
+
+.settings::before {
+    content:"\2699";
+    color:#f0e3e3;
+    font-size: 3vw;
+    /* margin-top:1rem; */
+}
+.settings::after {
+    content: "Settings";
+    font-size: 1vw;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:500;
+    color: #f5f4f4;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events:none;
+}
+#search-btn {
+    position: relative;
+    text-decoration: none;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    color:#f0e3e3;
+    padding-bottom: 0.3vw;
+}
+
+.dropdown-container {
+  display: none;
+  position: absolute;  /* position inside header */
+  top: 100%;           /* drop just below navbar */
+  right: .2rem;         /* align with right padding */
+  background:  #1e1e1e;
+  padding: 6px 3px;
+  box-shadow: -10px 10px 5px rgba(10,10,10,0.9);
+  width: 250px;
+  gap:1rem;
+  flex-direction: column;
+}
+.search-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap:0.2rem;
+    background-color:transparent;
+    width: 100%;
+    height: 2.5rem;
+}
+.search-bar span {
+    border-radius: 5px;
+    height: 100%;
+    background-color:  #242527;
+    color: #f0e3e3;
+}
+.search-bar button {
+    /* border: 1px solid black; */
+    background-color:transparent;
+    color: #242527;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    height:100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: #f0e3e3;
+}
+.search-bar input{
+    border : none;
+    padding: 0.2rem;
+    height:100%;
+    border-radius: 5px;
+    background-color:  #242527;
+    color: #f0e3e3;
+}
+
+.recent-searches {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background-color: #242527;
+    margin-top:0.2rem;
+    border-radius: 5px;
+}
+.recent-searches a {
+    color:#f0e3e3;
+    text-decoration: none;
+}
+i::before {
+    font-size: 2.5vw;
+    color:#f0e3e3;
+}
+i::after {
+    content: "Search";
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 1vw;
+    font-weight: 500;
+    color:#f5f4f4;
+    opacity:0;
+    transition:opacity 0.3s ease;
+    pointer-events:none;
+    top:100%;
+    left:50%;
+    position:absolute;
+    transform: translateX(-50%);
+    margin-top:0.2vw;
+
+}
+i:hover::before{
+    color:#838de9
+}
+i:hover::after{
+    opacity:1;
+}
+/* Show text on hover */
+nav a:hover::after {
+    opacity: 1;
+}
+
+nav a:hover::before{
+    color:#838de9;
+}
+.auth {
+    padding:0.5vw;
+    border-radius: 20px;
+    border : 2px solid #f0e3e3;
+    transition: all 0.3s ease;
+    font-size: 2vw;
+}
+
+.homburgur-button {
+    position: relative;
+    width:3vw;
+    height: 3vw;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    padding-bottom: 0.5vw;
+
+}
+
+.homburgur-button span {
+    display: block;
+    height: 0.3rem;
+    background-color: #f0e3e3;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+.homburgur-button::after {
+    content: "Menu";
+    position: absolute;
+    left:10%;
+    top: 60%;
+    transform: translateY(100%);
+    font-size: 1vw;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    color: #f5f4f4;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events:none;
+}
+/* Show text on hover */
+.homburgur-button:hover::after {
+    opacity: 1;
+}
+/* Hide text when clicked (menu active) */
+.homburgur-button.active::after {
+    opacity: 0 !important;
+}
+.homburgur-button.active span:nth-child(1) {
+    transform: rotate(90deg) translateY(3px);
+    background-color:#3e5a8d;
+    position: relative;
+}
+.homburgur-button.active span:nth-child(2) {
+    opacity: 0;
+
+}
+.homburgur-button.active span:nth-child(3) {
+    transform: rotate(-90deg) translateY(-3px);
+    background-color:#3e5a8d;
+    position: relative;
+
+}
+.box-info1{
+    display: flex;
+    flex-direction: column;
+    margin-top:100px;
+    justify-content: center;
+    text-align: center;
+}
+#urdu-word {
+    font-size: 1.3em;
+    color: rgb(177, 169, 169);
+    font-weight: bold;}
+
+#main-heading {
+    font-size: 2.5em;
+    color:rgb(177, 169, 169);
+    font-weight: bold;
+    text-align: center;
+    text-decoration:double underline;
+    /* text-shadow: 0 0 5px; */
+}
+
+
+.first-pera {
+    font-size: 1.2em;
+    color: #fff;
+    margin: 10px 0;
+}
+
+.container {
+    margin-top:2rem;
+    background: rgba(90, 60, 60, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0 0 10px rgba(10, 10, 10, 0.5);
+}
+ #arabic{
+    font-size: 1.8em;
+    color: #f0f0f0;
+ }
+
+#urdu,#english{
+    font-size: 1.2em;
+    color: #fab2b2;
+}
+#source {
+    font-size: 1.2em;
+    color: #050505;
+}
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #252729;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3a3d40;
+    box-shadow: #f7f3f3 0px 0px 10px;
+}
+button:active {
+    background-color: #1f2022;
+    box-shadow: #f7f3f3 0px 0px 5px;
+}
+button:focus {
+    outline:none;
+    box-shadow: #f7f3f3 0px 0px 5px;
+}
+#surah-name, #ayah-number {
+    font-size: 1.2em;
+    color: #f0f0f0;
+    font-weight: bold;
+    text-align: center;
+    margin: 5px 0;
+}
+#surah-name {
+    text-decoration: underline;
+}
+#ayah-number {
+    font-style: italic;
+}
+
+.source {
+    font-size: 1.2em;
+    color: #bb9a9a;
+    text-align: center;
+    margin-top: 10px;
+    font-style: italic;
+}
+#source-peragraph {
+    font-size: 1.2em;
+    color: #bb9a9a;
+    text-align: center;
+    margin-top: 10px;
+    font-style: italic;
+}
+main {
+    flex:1;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+}
+footer {
+    text-align: center;
+    width: 100%;
+    color: #f0f0f0;
+    padding: 10px;
+    margin-bottom: 0;
+    border-top:1px solid  rgba(0, 0, 0, 0.5)f0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.content {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    /* opacity:0; */
+    transition: opacity 0.8s ease-in-out;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color:  #1e1e1e;
+    top: 100%;
+    left: 0.1rem;
+    overflow: hidden;
+    box-shadow: 10px 10px 6px rgba(0,0,0,0.9);
+    padding:0 1rem;
+}
+
+.gradient-text {
+    position: relative;
+    padding:1rem 0.4rem;
+    text-decoration: none;
+    color: rgb(196, 181, 181);
+    overflow: hidden;
+}
+
+
+.color-changer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+.color-changer span {
+    position: absolute;
+    background-color: #f0e3e3;
+    border-radius: 2px;
+    transition: all ease 5s;
+    /* text-shadow: 0px 10px 20px rgba(230, 230, 238, 0.9); */
+
+}
+
+.gradient-text::after{
+  content: attr(data-text); /* duplicate text */
+  position: absolute;
+  padding: 1rem 0.4rem;
+  inset:0;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, #ff0000, #00ff00, #0000ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: width 3s linear; /* smooth fill */
+  /* z-index: 1; */
+}
+
+.gradient-text.animate::after{
+  width: 100%; /* reveal gradually */
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+    .menu-btn {
+        display: flex;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #333;
+        flex-direction: column;
+        width: 200px;
+        padding: 20px;
+        gap: 15px;
+        display: none; /* Hidden by default */
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+}
